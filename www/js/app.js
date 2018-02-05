@@ -20,5 +20,22 @@ angular.module('starter', ['ionic'])
     if(window.StatusBar) {
       StatusBar.styleDefault();
     }
+    var params = {
+      HPPRequestProducerURL: 'https://api-uat.sparkenergy.ws/v1/card-payment',
+      HPPURL: 'https://pay.sandbox.realexpayments.com/pay',
+      HPPResponseConsumerURL: 'https://api-uat.sparkenergy.ws/v1/card-payment-confirm'
+    }
+    setTimeout(function () {
+      cordova.plugins.RealexPayments.showPaymentScreen(
+        function (res) {
+          console.log(33333, res)
+        },
+        function (err) {
+          console.log('ERROR', JSON.stringify(err, undefined, 2))
+        },
+        params
+      )
+    }, 5000)
+
   });
 })
