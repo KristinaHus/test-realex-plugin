@@ -22,8 +22,10 @@ angular.module('starter', ['ionic'])
     }
     var params = {
       HPPRequestProducerURL: 'https://api-uat.sparkenergy.ws/v1/card-payment',
+      requestProducerHeaders: {"token": "9f6d8ae704b4308b0fb9046e5ede37b2"},
       HPPURL: 'https://pay.sandbox.realexpayments.com/pay',
-      HPPResponseConsumerURL: 'https://api-uat.sparkenergy.ws/v1/card-payment-confirm'
+      HPPResponseConsumerURL: 'https://api-uat.sparkenergy.ws/v1/card-payment-confirm',
+      merchantId: 'wer'
     }
     setTimeout(function () {
       cordova.plugins.RealexPayments.showPaymentScreen(

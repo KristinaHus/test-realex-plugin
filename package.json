@@ -16,10 +16,6 @@
   "cordovaPlugins": [
     {
       "locator": "./assets/uk.co.sparkenergy.realex.playemnts.plugin.RealexPaymentsPlugin"
-    },
-    {
-      "locator": "../Realex-plugin",
-      "id": "uk-co-sparkenergy-realex-playemnts-plugin"
     }
   ],
   "cordovaPlatforms": [
